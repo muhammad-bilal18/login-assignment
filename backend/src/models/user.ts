@@ -1,6 +1,4 @@
 import mongoose from "mongoose";
-import jwt from 'jsonwebtoken';
-import config from 'config';
 
 const userSchema = new mongoose.Schema({
     firstName: String,
@@ -24,9 +22,4 @@ export function validateNames(data: any) {
     });
 
     return schema.validate(data).error;
-}
-
-userSchema.methods.genrateToken = function() {
-    const token = jwt.sign({ _id: this._id, firstName: this.firstName, lastName: this.lastName, email: this.email }, config.get('jwtPrivateKey'));
-    return token;
 }

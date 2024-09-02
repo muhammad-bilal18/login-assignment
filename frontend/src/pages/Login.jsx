@@ -17,7 +17,7 @@ export function Login() {
     if(!res.success) alert(res.message);
     else {
       setUser(res.user);
-      navigate('/home', { state: { user: res.user } });
+      navigate('/', { state: { user: res.user } });
     }
   }
 
