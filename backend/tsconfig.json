@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es2022",                         // Updated target to ES2022
+    "module": "Node16",                         // Module remains Node16, compatible with Node.js 16
+    "moduleResolution": "Node16",                 // Explicit module resolution strategy
+    "esModuleInterop": true,                    // Allows default imports from modules with no default export
+    "forceConsistentCasingInFileNames": true,   // Ensures consistent file naming case
+    "strict": true,                             // Enables all strict type-checking options
+    "skipLibCheck": true,                       // Skips type checking of declaration files
+    "allowSyntheticDefaultImports": true,       // Allows default imports from modules with no default export
+    "noImplicitReturns": true,                  // Ensures all code paths in a function return a value
+    "noFallthroughCasesInSwitch": true,         // Ensures switch statements have no fallthrough
+    "useUnknownInCatchVariables": false,        // Enables use of 'unknown' type in catch clause variables
+    "resolveJsonModule": true,                  // Allows importing JSON files
+    "isolatedModules": true,                    // Compiles each file as an isolated module
+    "skipDefaultLibCheck": true,                // Skips checking default library declaration files
+
+    "rootDir": "./src",                         // Specifies the root directory of input files
+    "outDir": "./dist"                          // Redirects output structure to the 'dist' folder
+  },
+  "include": ["src/**/*"],                      // Include all files in the 'src' directory
+  "exclude": ["node_modules", "dist"]           // Exclude node_modules and dist directories
+}
